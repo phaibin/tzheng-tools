@@ -1,0 +1,19 @@
+<h1>Choose file:</h1>
+
+<%= form_tag({:action => :check}, :multipart => true) do %>
+  <%= file_field_tag 'file' %>
+<%= submit_tag 'Submit' %>
+<% end %>
+
+<p><b>文件名：</b></p>
+<p><%= @check_file %></p>
+<p><b>错误行：</b></p>
+<p><%= @error_line %></p>
+<p><b>开始tag：</b></p>
+<p><%= @begin_tag %></p>
+<p><b>开始文本：</b></p>
+<p><%= @begin_text %></p>
+<p><b>结束tag：</b></p>
+<p><%= @end_tag %></p>
+<p><b>结束文本：</b></p>
+<p><%= @end_text %></p>
